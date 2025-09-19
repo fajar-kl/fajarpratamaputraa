@@ -16,3 +16,196 @@
   <p>Selamat datang di halaman fael.</p>
   <img src="https://assets.kompasiana.com/items/album/2023/05/15/9a24d48eafa6ba090c13cb91bcda5323-6462152e08a8b53812152342.jpg?t=o&v=770.jpeg" alt="Foto meme" width="300" />
 </article>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toko Komputer</title>
+  <!-- Font Awesome CDN untuk ikon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pQ6NxE9xwN7ujpyQ8EB6BZw7fYqc+ZIQH0D6qIFgJ+6H0qjz4pP74ZaZKXXEyHKf0NMBb5qY7KzTfgaNCE7zqw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffca28;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+      height: 300px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    /* Produk Container */
+    .products {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      width: 280px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgb(0 0 0 / 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #1e88e5;
+      text-align: center;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #e53935;
+      margin-bottom: 15px;
+    }
+
+    .btn-buy {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-buy:hover {
+      background-color: #1565c0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #263238;
+      color: #cfd8dc;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-computer"></i> KomputerStore</h1>
+    <nav>
+      <a href="#produk">Produk</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#about">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    Komputer Berkualitas, Harga Terbaik
+  </section>
+
+  <section id="produk" class="products">
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Laptop Gaming">
+      <h3>Laptop Gaming X15</h3>
+      <p class="price">Rp15.500.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="PC Desktop">
+      <h3>PC Desktop Ultra</h3>
+      <p class="price">Rp12.000.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1580910051073-4127e8f52d74?auto=format&fit=crop&w=600&q=80" alt="Monitor LED">
+      <h3>Monitor LED 24"</h3>
+      <p class="price">Rp2.000.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+  </section>
+
+  <footer id="kontak">
+    <p>Kontak Kami: <i class="fa-solid fa-envelope"></i> info@komputerstore.id | <i class="fa-solid fa-phone"></i> 0812-3456-7890</p>
+    <p id="about">© 2025 KomputerStore. All rights reserved.</p>
+  </footer>
+</body>
+</html>
