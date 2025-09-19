@@ -12,226 +12,279 @@
 </html>
 <!-- Daftar tautan -->
 <article>
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Toko Online</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toko Serba Ada - Jualan Semua Barang</title>
 
-  <!-- Font Awesome CDN for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pQ6NxE9xwN7ujpyQ8EB6BZw7fYqc+ZIQH0D6qIFgJ+6H0qjz4pP74ZaZKXXEyHKf0NMBb5qY7KzTfgaNCE7zqw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+<!-- Font Awesome CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 
-  <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  header {
+    background: #004aad;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  nav a {
+    color: white;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffcb05;
+  }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      line-height: 1.5;
-    }
+  .hero {
+    background: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
 
-    /* Header */
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px 50px;
+  }
+  section h2 {
+    border-bottom: 3px solid #004aad;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #004aad;
+  }
 
-    header h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
+  }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+  .product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 230px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+  .product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  .product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #004aad;
+  }
+  .price {
+    font-weight: 700;
+    color: #e63946;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  .btn-buy {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-buy:hover {
+    background-color: #002f6c;
+  }
 
-    nav a:hover {
-      color: #ffdd57;
-    }
+  footer {
+    background: #002f6c;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
 
-    /* Hero Section */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-      height: 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
-
-    /* Products Section */
+  @media (max-width: 900px) {
     .products {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
       justify-content: center;
     }
-
-    .product-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-      width: 280px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .product-card h3 {
-      margin-bottom: 10px;
-      color: #007bff;
-    }
-
-    .price {
-      font-weight: 700;
-      color: #e63946;
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .btn-buy {
-      background-color: #007bff;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 6px;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
+    header {
       justify-content: center;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s ease;
+    }
+    nav {
+      margin-top: 15px;
       width: 100%;
-    }
-
-    .btn-buy:hover {
-      background-color: #0056b3;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #212529;
-      color: #adb5bd;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 50px;
-      font-size: 0.9rem;
     }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .products {
-        flex-direction: column;
-        align-items: center;
-      }
-      header {
-        justify-content: center;
-      }
-      nav {
-        margin-top: 10px;
-        width: 100%;
-        text-align: center;
-      }
-      nav a {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
+    nav a {
+      margin: 0 12px;
     }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>
-      <i class="fa-solid fa-store"></i> Toko Jualan
-    </h1>
-    <nav>
-      <a href="#produk">Produk</a>
-      <a href="#kontak">Kontak</a>
-      <a href="#about">Tentang Kami</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    Produk Berkualitas, Harga Terbaik
-  </section>
+<header>
+  <h1><i class="fa-solid fa-store"></i> Toko Serba Ada</h1>
+  <nav>
+    <a href="#elektronik"><i class="fa-solid fa-tv"></i> Elektronik</a>
+    <a href="#fashion"><i class="fa-solid fa-shirt"></i> Fashion</a>
+    <a href="#rumah"><i class="fa-solid fa-house"></i> Rumah Tangga</a>
+    <a href="#mainan"><i class="fa-solid fa-puzzle-piece"></i> Mainan</a>
+    <a href="#kontak"><i class="fa-solid fa-phone"></i> Kontak</a>
+  </nav>
+</header>
 
-  <section id="produk" class="products">
+<div class="hero">
+  Jualan Semua Barang Lengkap dan Berkualitas!
+</div>
+
+<section id="elektronik">
+  <h2><i class="fa-solid fa-tv"></i> Elektronik</h2>
+  <div class="products">
     <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Produk 1" />
-      <h3>leptop</h3>
-      <p class="price">Rp12.000.000</p>
+      <img src="https://images.unsplash.com/photo-1510557880182-3d4d3c23d2c7?auto=format&fit=crop&w=600&q=80" alt="Smart TV 55 inch" />
+      <h3>Smart TV 55"</h3>
+      <p class="price">Rp5.200.000</p>
       <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
     </article>
-
     <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Produk 2" />
-      <h3>manusia</h3>
-      <p class="price">Rp850</p>
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Laptop Gaming" />
+      <h3>Laptop Gaming</h3>
+      <p class="price">Rp12.500.000</p>
       <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
     </article>
-
     <article class="product-card">
-      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Produk 3" />
-      <h3>kursi</h3>
-      <p class="price">Rp2.500</p>
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Smartphone" />
+      <h3>Smartphone</h3>
+      <p class="price">Rp3.800.000</p>
       <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
     </article>
-  </section>
+  </div>
+</section>
 
-  <footer id="kontak">
-    <p>
-      Hubungi kami: <i class="fa-solid fa-envelope"></i> email@tokojualan.com | <i class="fa-solid fa-phone"></i> 0812-3456-7890
-    </p>
-    <p id="about">© 2025 Toko Jualan. Semua hak cipta dilindungi.</p>
-  </footer>
+<section id="fashion">
+  <h2><i class="fa-solid fa-shirt"></i> Fashion</h2>
+  <div class="products">
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=600&q=80" alt="Kaos Casual" />
+      <h3>Kaos Casual</h3>
+      <p class="price">Rp120.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=600&q=80" alt="Sepatu Sneakers" />
+      <h3>Sepatu Sneakers</h3>
+      <p class="price">Rp750.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Tas Ransel" />
+      <h3>Tas Ransel</h3>
+      <p class="price">Rp450.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+  </div>
+</section>
+
+<section id="rumah">
+  <h2><i class="fa-solid fa-house"></i> Rumah Tangga</h2>
+  <div class="products">
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Blender" />
+      <h3>Blender</h3>
+      <p class="price">Rp650.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1584735175275-1e14ab1e53b8?auto=format&fit=crop&w=600&q=80" alt="Vacuum Cleaner" />
+      <h3>Vacuum Cleaner</h3>
+      <p class="price">Rp1.200.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="Lampu Meja" />
+      <h3>Lampu Meja</h3>
+      <p class="price">Rp220.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+  </div>
+</section>
+
+<section id="mainan">
+  <h2><i class="fa-solid fa-puzzle-piece"></i> Mainan</h2>
+  <div class="products">
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Puzzle" />
+      <h3>Puzzle 3D</h3>
+      <p class="price">Rp300.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+    <article class="product-card">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Action Figure" />
+      <h3>Action Figure</h3>
+      <p class="price">Rp150.000</p>
+      <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Beli Sekarang</button>
+    </article>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Toko Serba Ada. Semua hak cipta dilindungi.
+</footer>
+
 </body>
 </html>
- 
